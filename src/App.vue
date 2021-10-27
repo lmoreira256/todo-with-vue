@@ -1,28 +1,64 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <h1>Tarefas</h1>
+        <NewTask @taskAdded="addTask" />
+        <TaskGrid :tasks="tasks" @taskDeleted="deleteTask" />
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TaskGrid from './components/TaskGrid.vue'
+import NewTask from './components/NewTask.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    components: { TaskGrid, NewTask },
+    data() {
+        return {
+            tasks: [
+                { name: 'Lavar louça', pending: false },
+                { name: 'Comprar blusa', pending: true },
+            ],
+        }
+    },
+    methods: {
+        addTask(task) {
+            const sameName = (t) => t.name === task.name
+            const reallyNew = this.tasks.filter(sameName).length == 0
+
+            if (reallyNew) {
+                this.tasks.push({
+                    name: task.name,
+                    pending: task.pending || true,
+                })
+            }
+        },
+        deleteTask(taskId) {
+            this.tasks.splice(taskId, 1)
+        },
+    },
 }
 </script>
 
 <style>
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(to right, rgb(22, 34, 42), rgb(58, 96, 115));
+    color: #fff;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#app h1 {
+    margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 3rem;
 }
 </style>
