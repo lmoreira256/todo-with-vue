@@ -1,24 +1,17 @@
-# to-do
+# 💻 Lista de tarefas
 
-## Project setup
-```
-npm install
-```
+🔴 Projeto desenvolvido com Vue;
+🔴 Baseado no [curso](https://www.udemy.com/course/vue-js-completo/);
+🔴 Lista de tarefas com salvamento em Local Storage;
+🔴 Hospedado na Vercel;
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+---
 
-### Compiles and minifies for production
-```
-npm run build
-```
+🧪 Para testar o site basta acessar o seguinte [link](https://todo-with-vue.vercel.app).
 
-### Lints and fixes files
-```
-npm run lint
-```
+🧬 Para testar localmente basta clonar e rodaro seguinte comando na raiz do projeto:
+`npm run serve`
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+---
+
+🙏 Qualquer sugestão e melhoria é muito bem vinda!
