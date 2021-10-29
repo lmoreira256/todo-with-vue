@@ -1,8 +1,8 @@
 # 💻 Lista de tarefas
 
-🔴 Projeto desenvolvido com Vue;
-🔴 Baseado no [curso](https://www.udemy.com/course/vue-js-completo/);
-🔴 Lista de tarefas com salvamento em Local Storage;
+🔴 Projeto desenvolvido com Vue;<br>
+🔴 Baseado no [curso](https://www.udemy.com/course/vue-js-completo/);<br>
+🔴 Lista de tarefas com salvamento em Local Storage;<br>
 🔴 Hospedado na Vercel;
 
 ---
